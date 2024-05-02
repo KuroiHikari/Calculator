@@ -25,8 +25,8 @@ Partial Class Form1
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Me.PnlTitle = New System.Windows.Forms.Panel()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.BtnMinimize = New System.Windows.Forms.Button()
+        Me.BtnMaximize = New System.Windows.Forms.Button()
         Me.BtnExit = New System.Windows.Forms.Button()
         Me.PnlHistory = New System.Windows.Forms.Panel()
         Me.RTBoxDisplayHistory = New System.Windows.Forms.RichTextBox()
@@ -75,8 +75,8 @@ Partial Class Form1
         '
         'PnlTitle
         '
-        Me.PnlTitle.Controls.Add(Me.Button2)
-        Me.PnlTitle.Controls.Add(Me.Button1)
+        Me.PnlTitle.Controls.Add(Me.BtnMinimize)
+        Me.PnlTitle.Controls.Add(Me.BtnMaximize)
         Me.PnlTitle.Controls.Add(Me.BtnExit)
         Me.PnlTitle.Dock = System.Windows.Forms.DockStyle.Top
         Me.PnlTitle.Location = New System.Drawing.Point(0, 0)
@@ -85,31 +85,31 @@ Partial Class Form1
         Me.PnlTitle.Size = New System.Drawing.Size(350, 40)
         Me.PnlTitle.TabIndex = 0
         '
-        'Button2
+        'BtnMinimize
         '
-        Me.Button2.Dock = System.Windows.Forms.DockStyle.Right
-        Me.Button2.FlatAppearance.BorderSize = 0
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button2.Image = CType(resources.GetObject("Button2.Image"), System.Drawing.Image)
-        Me.Button2.Location = New System.Drawing.Point(200, 0)
-        Me.Button2.Margin = New System.Windows.Forms.Padding(0)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(50, 40)
-        Me.Button2.TabIndex = 4
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.BtnMinimize.Dock = System.Windows.Forms.DockStyle.Right
+        Me.BtnMinimize.FlatAppearance.BorderSize = 0
+        Me.BtnMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnMinimize.Image = CType(resources.GetObject("BtnMinimize.Image"), System.Drawing.Image)
+        Me.BtnMinimize.Location = New System.Drawing.Point(200, 0)
+        Me.BtnMinimize.Margin = New System.Windows.Forms.Padding(0)
+        Me.BtnMinimize.Name = "BtnMinimize"
+        Me.BtnMinimize.Size = New System.Drawing.Size(50, 40)
+        Me.BtnMinimize.TabIndex = 4
+        Me.BtnMinimize.UseVisualStyleBackColor = True
         '
-        'Button1
+        'BtnMaximize
         '
-        Me.Button1.Dock = System.Windows.Forms.DockStyle.Right
-        Me.Button1.FlatAppearance.BorderSize = 0
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
-        Me.Button1.Location = New System.Drawing.Point(250, 0)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(0)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(50, 40)
-        Me.Button1.TabIndex = 3
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.BtnMaximize.Dock = System.Windows.Forms.DockStyle.Right
+        Me.BtnMaximize.FlatAppearance.BorderSize = 0
+        Me.BtnMaximize.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnMaximize.Image = CType(resources.GetObject("BtnMaximize.Image"), System.Drawing.Image)
+        Me.BtnMaximize.Location = New System.Drawing.Point(250, 0)
+        Me.BtnMaximize.Margin = New System.Windows.Forms.Padding(0)
+        Me.BtnMaximize.Name = "BtnMaximize"
+        Me.BtnMaximize.Size = New System.Drawing.Size(50, 40)
+        Me.BtnMaximize.TabIndex = 3
+        Me.BtnMaximize.UseVisualStyleBackColor = True
         '
         'BtnExit
         '
@@ -213,6 +213,7 @@ Partial Class Form1
         Me.TxtDisplay2.Margin = New System.Windows.Forms.Padding(0)
         Me.TxtDisplay2.Multiline = True
         Me.TxtDisplay2.Name = "TxtDisplay2"
+        Me.TxtDisplay2.ReadOnly = True
         Me.TxtDisplay2.Size = New System.Drawing.Size(350, 25)
         Me.TxtDisplay2.TabIndex = 3
         Me.TxtDisplay2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -223,11 +224,12 @@ Partial Class Form1
         Me.TxtDisplay1.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TxtDisplay1.Dock = System.Windows.Forms.DockStyle.Top
         Me.TxtDisplay1.Font = New System.Drawing.Font("Gadugi", 30.0!, System.Drawing.FontStyle.Bold)
-        Me.TxtDisplay1.ForeColor = System.Drawing.Color.DarkGray
+        Me.TxtDisplay1.ForeColor = System.Drawing.Color.White
         Me.TxtDisplay1.Location = New System.Drawing.Point(0, 115)
         Me.TxtDisplay1.Margin = New System.Windows.Forms.Padding(0)
         Me.TxtDisplay1.Multiline = True
         Me.TxtDisplay1.Name = "TxtDisplay1"
+        Me.TxtDisplay1.ReadOnly = True
         Me.TxtDisplay1.Size = New System.Drawing.Size(350, 50)
         Me.TxtDisplay1.TabIndex = 4
         Me.TxtDisplay1.Text = "0"
@@ -733,8 +735,8 @@ Partial Class Form1
     Friend WithEvents PnlTitle As Panel
     Friend WithEvents PnlHistory As Panel
     Friend WithEvents BtnExit As Button
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Button1 As Button
+    Friend WithEvents BtnMinimize As Button
+    Friend WithEvents BtnMaximize As Button
     Friend WithEvents Panel1 As Panel
     Friend WithEvents BtnMenu As Button
     Friend WithEvents BtnHistory As Button
